@@ -1,0 +1,52 @@
+<div class="d-flex" id="wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper" [ngClass]="status ? 'hide' : 'show'">
+      <div class="sidebar-heading">
+        <a class="navbar-brand" (click)="clickEvent()">
+          <img src="assets/img/Logo.png"
+            id="logo"
+            height="45"
+            alt="Logo yayasan"
+            loading="lazy"
+          />
+        </a>  
+      </div>
+      <div class="list-group list-group-flush">
+        <a class="nav-link list-group-item list-group-item-action bg-light" routerLink="/dashboard">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>  Dashboard</span></a>
+        <a class="nav-link list-group-item list-group-item-action bg-light" routerLink="/dashboard">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span>  Daftar Nama Siswa</span>
+        </a>
+        <a class="nav-link list-group-item list-group-item-action bg-light" routerLink="/dashboard">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <span>  Daftar Nama Wali</span>
+        </a>
+        <a class="nav-link list-group-item list-group-item-action bg-light" routerLink="/dashboard">
+            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            <span>  Input Nilai</span>
+        </a>
+        <a class="nav-link list-group-item list-group-item-action bg-light" routerLink="/dashboard">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span>  Tutorial</span>
+        </a>
+      </div>
+    </div>
+  
+    <div id="page-content-wrapper">
+      <app-header></app-header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="navbar-toggler" (click)="clickEvent()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </div>
+          <div id="title" class="navbar-toggler" (click)="clickEvent()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <h2 style="color:black">Effs Inventory</h2>
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid">
+        <ng-content></ng-content>
+    </div>
+    <app-footer></app-footer>
+  </div>

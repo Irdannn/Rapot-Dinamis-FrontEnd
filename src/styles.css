@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 95%; }
+body { margin: 0; font-family: poppins}
+  
+h1{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+  
+h2 {
+    font-family: poppins;
+    text-align: center;
+    margin: auto;
+}
+    
+* {
+    box-sizing: border-box;
+}
+@import url('assets/css/component.css');
+@import url('assets/css/form.css');
