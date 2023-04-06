@@ -1,0 +1,39 @@
+  
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 10vw 45vw 45vw;
+    grid-template-areas:
+    "sidebar header header"
+    "sidebar content content"
+    "sidebar  footer  footer";
+    background-color: #fff;
+    color: #444;
+}
+
+
+.box {
+    background-color: #444;
+    color: #fff;
+    font-size: 150%;
+}
+
+.header, .footer {
+    background-color: #999;
+}

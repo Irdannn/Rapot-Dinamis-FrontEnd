@@ -17,6 +17,7 @@ h2 {
     
 * {
     box-sizing: border-box;
+    font-size: 17px;
 }
 @import url('assets/css/component.css');
 @import url('assets/css/form.css');

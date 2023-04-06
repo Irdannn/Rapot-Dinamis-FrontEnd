@@ -1,3 +1,31 @@
+a {
+    text-decoration: none;
+    color: #000;
+  }
+.site-header { 
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    background-color: #A0CE65;
+    height: fit-content;
+}
+  
+.site-identity h1 {
+    font-size: 1.5em;
+    margin: .6em 0;
+    display: inline-block;
+}
+  
+.site-navigation ul, 
+.site-navigation li {
+    margin: 0; 
+    padding: 0;
+}
+  
+.site-navigation li {
+    display: inline-block;
+}
+
 .img-profile {
     width: 40px;
     height: 40px;
