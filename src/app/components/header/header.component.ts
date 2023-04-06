@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { AuthService } from 'src/app/services/auth.service';
@@ -7,9 +7,12 @@ import { UserStoreService } from 'src/app/services/user-store.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  
 })
 export class HeaderComponent implements OnInit {
+  menuOpen = false;
+
   public users:any = [];
   public role!:string;
 
@@ -34,6 +37,10 @@ export class HeaderComponent implements OnInit {
       const roleRoleFromToken = this.auth.getRoleFromToken();
       this.role = val || roleRoleFromToken
     })
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
   logout() {

@@ -18,7 +18,7 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: 10vw 45vw 45vw;
+    grid-template-columns: 6vw 47vw 47vw;
     grid-template-areas:
     "sidebar header header"
     "sidebar content content"
@@ -29,11 +29,30 @@
 
 
 .box {
-    background-color: #444;
+    background-color: #fff;
     color: #fff;
     font-size: 150%;
 }
 
 .header, .footer {
     background-color: #999;
+}
+.header-div {
+	background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+.header-div .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( to bottom, #a0ce65 10%, #f2f8a1 100%);
 }
