@@ -5,6 +5,7 @@
     background-color: #a0ce65;
     color: black;
     padding: 10px;
+    width: 90vw;
 }
 
 /* Logo styles */
@@ -83,4 +84,14 @@
     font-size: 18px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.overlay{
+	width: 100%;
+	height: 300px;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( to bottom, #a0ce65 10%, #f2f8a1 100%);
+	border-radius: 0 0 85% 85% / 80%;
 }

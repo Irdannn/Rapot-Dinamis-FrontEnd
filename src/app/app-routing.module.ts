@@ -6,6 +6,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SignupsComponent } from './components/signups/signups.component';
 import { AuthGuard } from './guards/auth.guard';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch: 'full'},
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path: 'signups', component: SignupsComponent},
   {path: 'footer', component: FooterComponent},
   // {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  // {path: 'header', component: SidebarComponents, canActivate:[AuthGuard]},
+  {path: 'header', component: HeaderComponent},
   // {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]}
   {path: 'dashboard', component: DashboardComponent},
   //{path: 'header', component: SidebarComponents},

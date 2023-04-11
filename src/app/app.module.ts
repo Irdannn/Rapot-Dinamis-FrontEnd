@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PembayaranComponent } from './components/pembayaran/pembayaran.component';
 import { RapotComponent } from './components/rapot/rapot.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +42,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HttpClientModule,
     NgToastModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatGridListModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
