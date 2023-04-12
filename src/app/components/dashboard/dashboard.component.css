@@ -91,3 +91,34 @@
     grid-area: content-bellow;
     margin: 20px;
 }
+
+@media only screen and (max-width: 760px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
+    .cardhead {
+        margin-left: 40px;
+    }
+    .head {
+        margin: 2px;
+    }
+    .head h4 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .head p {
+        font-size: 0.8rem;
+    }
+    .content-midle {
+        margin-left: 40px;
+    }
+    .content-bellow {
+        margin-left: 40px;
+    }
+
+}

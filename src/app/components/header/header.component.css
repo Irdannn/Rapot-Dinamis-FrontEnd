@@ -72,10 +72,6 @@
     cursor: pointer;
 }
 
-.dropdown-item:hover {
-    background-color: white
-}
-
 .profile:hover .dropdown {
     display: block;
 }
@@ -86,4 +82,13 @@
     font-size: 18px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 760px) {
+    .profile-name {
+        margin-right: 0;
+    }
+    .logo {
+        visibility: hidden;
+    }
 }

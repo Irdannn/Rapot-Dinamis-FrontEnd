@@ -12,12 +12,8 @@ const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'signups', component: SignupsComponent},
-  {path: 'footer', component: FooterComponent},
-  // {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path: 'header', component: HeaderComponent},
-  // {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]}
   {path: 'dashboard', component: DashboardComponent},
-  //{path: 'header', component: SidebarComponents},
   {path: 'profile', component: ProfileComponent}
 ];
 

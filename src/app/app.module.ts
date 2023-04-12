@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PembayaranComponent } from './components/pembayaran/pembayaran.component';
 import { RapotComponent } from './components/rapot/rapot.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatToolbarModule,
     MatSidenavModule,
     MatGridListModule,
+    MatMenuModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

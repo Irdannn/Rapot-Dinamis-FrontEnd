@@ -4,15 +4,14 @@
         <div class="message">
             <i class="fa fa-envelope" aria-hidden="true"></i>
         </div>
-        <div class="profile-photo">
-            <img src="assets/img/ird.png" (click)="toggleMenu()" alt="Profile Photo">
-            <div [ngClass]="{'open': menuOpen}" class="dropdown">
-                <div class="dropdown-item">Profile</div>
-                <div class="dropdown-item">Settings</div>
-                <div class="dropdown-item">Logout</div>
-            </div>
+        <div  class="profile-photo">
+            <img mat-button [matMenuTriggerFor]="Menu" src="assets/img/ird.png" alt="Profile Photo">
+            <mat-menu #Menu="matMenu" xPosition="after">
+                <div mat-menu-item class="dropdown-item" routerLink="profile">Profile</div>
+                <div mat-menu-item class="dropdown-item">Settings</div>
+                <div mat-menu-item class="dropdown-item">Logout</div>
+            </mat-menu>
         </div>
-        <div class="profile-name">John Doe</div>
+        <div mat-button [matMenuTriggerFor]="Menu" class="profile-name">John Doe</div>
     </div>
 </header>
-<!-- <div class="overlay"></div> -->

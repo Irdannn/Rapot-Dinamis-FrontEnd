@@ -4,7 +4,7 @@
             <img class="img-logo" src="assets/img/Logo.png" alt="Logo YIM Malang">
         </button>
         <div class="logo-text" @fadeInOut *ngIf="collapsed">Effs</div>
-        <button class="btn-close" @rotate *ngIf="collapsed">
+        <button class="btn-close" (click)="closeSidenav()" @fadeInOut *ngIf="collapsed">
             <i class="fal fa-times close-icon"></i>
         </button>
     </div>
