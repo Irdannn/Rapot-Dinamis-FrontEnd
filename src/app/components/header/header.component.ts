@@ -4,6 +4,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserStoreService } from 'src/app/services/user-store.service';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -43,7 +44,7 @@ export class HeaderComponent implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  logout() {
+  logout(): void {
     this.auth.signOut();
   }
 }

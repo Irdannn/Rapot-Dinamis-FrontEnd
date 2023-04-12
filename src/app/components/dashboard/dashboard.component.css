@@ -20,13 +20,14 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: 6vw 47vw 47vw;
+    grid-template-columns: 4vw 48vw 48vw;
     grid-template-areas:
     "sidebar header header"
     "sidebar content content"
     "sidebar  footer  footer";
     background-color: #fff;
     color: #444;
+    z-index: -1;
 }
 
 
@@ -34,8 +35,6 @@
     background-color: #fff;
     color: #fff;
     font-size: 150%;
-    z-index: 1;
-    margin-top: 100px;
 }
 
 .head {
@@ -44,13 +43,25 @@
 }
 
 .sticky {
-    position: fixed;
-    z-index: 0;
+    position: sticky;
     top: 0;
+    z-index: 1;
+}
+
+.overlay{
+	width: 100vw;
+	height: 300px;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( to bottom, #a0ce65 10%, #f2f8a1 100%);
+	border-radius: 0 0 85% 85% / 80%;
+    z-index: 0;
+    position: fixed;
 }
 
 .content {
-    margin: 10px 10px 10px 30px;
+    margin: 60px 10px 10px 40px;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-template-areas:
