@@ -1,3 +1,31 @@
+.namaanak {
+    grid-area: namaanak;
+}
+
+.detailprofile {
+    grid-area: detailprofile;
+}
+
+.tagihan {
+    grid-area: tagihan;
+}
+
+.pengumuman {
+    grid-area: pengumuman;
+}
+
+.profile-content {
+    display: grid;
+    margin: 60px 10px 10px 40px;
+    grid-template-columns: 60% 30%;
+    grid-template-areas:
+    "profile-head profile-head"
+    "namaanak detailprofile"
+    "tagihan pengumuman";
+    background-color: transparent;
+    color: #444;
+}
+
 .fotoprofil img {
     width: 15vw;
     height: 15vw;
@@ -8,8 +36,10 @@
     flex-direction: row;
     justify-content: space-around;
     width: 90vw;
+    grid-area: profile-head;
+    margin-top: 20px;
 }
 
 .detailuser {
-    text-align: start;
+    justify-content: flex-start;
 }

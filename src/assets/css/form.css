@@ -20,6 +20,7 @@
     padding: 12px 12px 12px 0;
     display: inline-block;
     font-family: poppins;
+    color: rgb(24, 23, 23);
   }
   
   input[type=submit] {

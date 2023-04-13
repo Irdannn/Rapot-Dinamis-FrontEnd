@@ -5,19 +5,18 @@ body {
     margin: 0; 
     font-family: poppins;
     background-color: aliceblue;
+    color: black
 }
-  
-h1{
-    margin-top: 20px;
-    text-align: center;
-    color: black;
+
+h1 {
+    font-weight: 600;
+    color: rgb(20, 20, 20);
 }
-  
-h2 {
-    font-family: poppins;
-    text-align: center;
-    margin: auto;
+
+p {
+    color: rgb(20, 20, 20);
 }
+
     
 * {
     box-sizing: border-box;

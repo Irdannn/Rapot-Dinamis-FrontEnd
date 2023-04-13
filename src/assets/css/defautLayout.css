@@ -61,18 +61,6 @@
     position: fixed;
 }
 
-.content {
-    margin: 60px 10px 10px 40px;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-areas:
-    "cardhead cardhead cardhead"
-    "content-midle content-midle content-side"
-    "content-bellow  content-bellow  content-bellow";
-    background-color: transparent;
-    color: #444;
-}
-
 @media only screen and (max-width: 760px) {
     .wrapper {
         display: flex;

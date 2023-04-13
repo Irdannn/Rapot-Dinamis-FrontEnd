@@ -4,6 +4,17 @@ table {
   font-family: poppins;
   font-size: 0.87rem;
   height: fit-content;
+  width: 75vw;
+}
+
+.title-page h4 {
+  text-align: center;
+  color: rgb(22, 21, 21);
+  font-weight: 700;
+}
+
+.thead-dark th{
+  font-weight: 400;
 }
 
 /* button-style */
@@ -17,13 +28,13 @@ button {
   cursor: pointer;
   width: 8vw;
   height: 6vh;
-  background-image: linear-gradient(to top, #f3e308 50%, #FDFDFD 100%);
+  background-image: linear-gradient(to top, #f3e308 50%, #c2c9c28c 100%);
   border: 1px solid #8F9092;
   transition: all 0.2s ease;
   font-family: poppins;
   font-size: 14px;
   font-weight: 600;
-  color: #353333;
+  color: #1a1919;
   text-shadow: 0 1px #fff;
 }
 

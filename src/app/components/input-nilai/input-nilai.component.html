@@ -7,8 +7,60 @@
     <div class="box sidebar">
         <app-sidenav></app-sidenav>
     </div>
-    <div class="box content">
-        
+    <div class="box content input-page">
+        <div class="title-page">
+            <h4>Input Nilai</h4>
+        </div>
+        <form class="card input">
+            <div class="row">
+            <div class="col-25">
+                <label for="id_barang">ID Barang</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="id_barang" id="id_barang" required readonly>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="nama_barang">Nama Barang</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="nama_barang" id="nama_barang" required readonly >
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                <label for="user">Peminjam</label>
+                </div>
+                <div class="col-75">
+                <input type="text" id="user" name="user" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="keterangan_pinjam">Keperluan Pinjam</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="keterangan_pinjam" id="ketrangan" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="waktupinjam"> Waktu Peminjaman</label>
+            </div>
+            <div class="col-75">
+                <input type="datetime-local" name="waktupinjam" id="waktupinjam" required>
+                <span>   Sampai dengan    </span>
+                <input type="datetime-local" name="waktukembali" id="waktukembali">
+            </div>
+            </div>
+            <br>
+            <div class="row">
+            <button type="submit">Simpan</button>
+            <br>
+            <br>             
+            </div>
+        </form>
     </div>
     <div class="box footer">
         <app-footer></app-footer>
