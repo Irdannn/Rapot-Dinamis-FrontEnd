@@ -1,5 +1,5 @@
 .outer{
-  height: max-content;
+  height: 100%;
   background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6) no-repeat;  
 }
 
@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 400px;
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 0.4em;

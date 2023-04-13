@@ -22,6 +22,10 @@ import { PembayaranComponent } from './components/pembayaran/pembayaran.componen
 import { RapotComponent } from './components/rapot/rapot.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { DaftarSiswaComponent } from './components/daftar-siswa/daftar-siswa.component';
+import { DaftarWaliComponent } from './components/daftar-wali/daftar-wali.component';
+import { InputNilaiComponent } from './components/input-nilai/input-nilai.component';
+import { TutorialComponent } from './components/tutorial/tutorial.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import {MatMenuModule} from '@angular/material/menu';
     FooterComponent,
     PembayaranComponent,
     RapotComponent,
-    SidenavComponent
+    SidenavComponent,
+    DaftarSiswaComponent,
+    DaftarWaliComponent,
+    InputNilaiComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,

@@ -1,26 +1,26 @@
 export const navbarData = [
     {
-        routeLink: 'dashboard',
+        routeLink: '/dashboard',
         icon: 'fal fa-home',
         label: 'Dashboard'
     },
     {
-        routeLink: 'dashboard',
+        routeLink: '/daftarsiswa',
         icon: 'fal fa-user',
         label: 'Daftar Siswa'
     },
     {
-        routeLink: 'dashboard',
+        routeLink: '/daftarwali',
         icon: 'fal fa-users',
         label: 'Daftar Wali Siswa'
     },
     {
-        routeLink: 'dashboard',
+        routeLink: '/inputnilai',
         icon: 'fal fa-pencil-square',
         label: 'Input Nilai'
     },
     {
-        routeLink: 'dashboard',
+        routeLink: '/tutorial',
         icon: 'fal fa-book',
         label: 'Tutorial'
     },

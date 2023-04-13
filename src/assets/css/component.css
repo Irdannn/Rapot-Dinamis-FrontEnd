@@ -9,15 +9,15 @@ table {
 /* button-style */
 
 button {
-  border-radius: 20%;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
   cursor: pointer;
-  width: 4vw;
+  width: 8vw;
   height: 6vh;
-  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  background-image: linear-gradient(to top, #f3e308 50%, #FDFDFD 100%);
   border: 1px solid #8F9092;
   transition: all 0.2s ease;
   font-family: poppins;

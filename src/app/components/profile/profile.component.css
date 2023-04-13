@@ -1,0 +1,15 @@
+.fotoprofil img {
+    width: 15vw;
+    height: 15vw;
+}
+
+.profile-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90vw;
+}
+
+.detailuser {
+    text-align: start;
+}
