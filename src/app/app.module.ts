@@ -14,7 +14,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgToastModule  } from 'ng-angular-popup';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -54,7 +54,8 @@ import { TutorialComponent } from './components/tutorial/tutorial.component';
     MatToolbarModule,
     MatSidenavModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    JwtModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
