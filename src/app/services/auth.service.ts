@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router';
-//import { JwtHelperService } from '@auth0/angular-jwt'; 
+import { JwtHelperService } from '@auth0/angular-jwt'; 
 import { TokenApiModel } from '../models/token-api.model';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   login(loginObj:any) {
-    return this.http.post<any>(`${this.baseurl}profile`, loginObj)
+    return this.http.post<any>(`${this.baseurl}login`, loginObj)
   }
   signOut() {
     localStorage.clear();

@@ -26,7 +26,7 @@ export class SignupsComponent implements OnInit {
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
       name: ['', Validators.required],
-      role: [''],
+      role: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
       password_confirmation: ['', Validators.required]
@@ -51,7 +51,7 @@ export class SignupsComponent implements OnInit {
   onSignUp(){
     if(this.signUpForm.valid) {
       // send the obj to database
-      //console.log(this.signUpForm.value)
+      console.log(this.signUpForm.value)
       this.auth.signUp(this.signUpForm.value)
       .subscribe({
         next:(res=>{
