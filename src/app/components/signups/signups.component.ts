@@ -25,14 +25,13 @@ export class SignupsComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      name: ['', Validators.required],
+      username: ['', Validators.required],
+      namalengkap: ['', Validators.required],
       role: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', Validators.required],
-      password_confirmation: ['', Validators.required]
-    },
-    [CustomValidators.MatchValidator('password', 'password_confirmation')])
-  }
+      password: ['', Validators.required]
+    }
+  )}
 
   hideShowPass(){
     this.isText = !this.isText;
@@ -40,13 +39,6 @@ export class SignupsComponent implements OnInit {
     this.isText ? this.type = "text" : this.type = "password";
   }
 
-  
-  get passwordMatchError() {
-    return (
-      this.signUpForm.getError('mismatch') &&
-      this.signUpForm.get('confirmPassword')?.touched
-    );
-  }
 
   onSignUp(){
     if(this.signUpForm.valid) {
