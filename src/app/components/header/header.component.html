@@ -9,7 +9,7 @@
             <mat-menu #Menu="matMenu" xPosition="after">
                 <div mat-menu-item class="dropdown-item" routerLink="/profile">Profile</div>
                 <div mat-menu-item class="dropdown-item">Settings</div>
-                <div mat-menu-item class="dropdown-item">Logout</div>
+                <div (click)="logout()" mat-menu-item class="dropdown-item">Logout</div>
             </mat-menu>
         </div>
         <div mat-button [matMenuTriggerFor]="Menu" class="profile-name">John Doe</div>

@@ -10,7 +10,7 @@ import { Observable, map } from 'rxjs';
 })
 export class AuthService {
 
-  private baseurl:string = "https://localhost:8000/api/auth/";
+  private baseurl:string = "https://localhost:7048/api/User/";
   private userPayLoad:any;
   constructor(private http : HttpClient, private router: Router) { 
     this.userPayLoad = this.decodedToken();
@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   login(loginObj:any) {
-    return this.http.post<any>(`${this.baseurl}login`, loginObj)
+    return this.http.post<any>(`${this.baseurl}authenticate`, loginObj)
   }
   signOut() {
     localStorage.clear();
