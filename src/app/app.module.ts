@@ -21,7 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PembayaranComponent } from './components/pembayaran/pembayaran.component';
 import { RapotComponent } from './components/rapot/rapot.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule} from '@angular/material/menu';
 import { DaftarSiswaComponent } from './components/daftar-siswa/daftar-siswa.component';
 import { DaftarWaliComponent } from './components/daftar-wali/daftar-wali.component';
 import { InputNilaiComponent } from './components/input-nilai/input-nilai.component';
