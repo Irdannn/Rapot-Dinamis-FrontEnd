@@ -16,20 +16,8 @@ export class AuthService {
     this.userPayLoad = this.decodedToken();
   }
 
-  // signUp(userObj:any) {
-  //   return this.http.post<any>(`${this.baseurl}register`, userObj)
-  // }
-
-  public signUp(name: string, email: string, password: string): Observable<any> {
-    return this.http.post<any>('https://localhost:8000/api/auth/register', { name, email, password })
-      .pipe(
-        map(response => {
-          if (response && response.token) {
-            localStorage.setItem('access_token', response.token);
-          }
-          return response;
-        })
-      );
+  signUp(userObj:any) {
+    return this.http.post<any>(`${this.baseurl}register`, userObj)
   }
 
   login(loginObj:any) {

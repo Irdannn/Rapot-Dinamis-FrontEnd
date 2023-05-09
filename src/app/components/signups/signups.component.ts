@@ -13,10 +13,6 @@ import { CustomValidators } from 'src/app/helpers/matchvalidator';
 })
 export class SignupsComponent implements OnInit {
 
-  name!: string;
-  email!: string;
-  password!: string;
-  error!: string;
   type: string = "password";
   isText: boolean = false;
   eyeIcon: string = "fa-eye-slash";
@@ -58,7 +54,7 @@ export class SignupsComponent implements OnInit {
     if(this.signUpForm.valid) {
       // send the obj to database
       console.log(this.signUpForm.value)
-      this.auth.signUp(this.name, this.email, this.password)
+      this.auth.signUp(this.signUpForm.value)
       .subscribe({
         next:(res=>{
           this.toast.success({detail: "SUCCESS", summary:res.message, duration: 5000});
