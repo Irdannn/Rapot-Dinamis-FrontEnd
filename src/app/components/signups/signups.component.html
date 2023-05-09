@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <small class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required', 'password')">*Password is required</small>
-                    <div class="form-group pt-3">
+                    <!-- <div class="form-group pt-3">
                         <div class="field" [class.error]="signUpForm.controls['password_confirmation'].dirty && signUpForm.hasError('required', 'password_confirmation')">
                             <span class="fa fa-lock p-2"></span>
                             <input autocomplete="off" class="input-field" formControlName="password_confirmation" [type]="type" placeholder="Konfirmasi Password">
@@ -47,7 +47,7 @@
                     <small class="text-danger" *ngIf="signUpForm.controls['password_confirmation'].dirty && signUpForm.hasError('required', 'password_confirmation')">*Konfirmasi Password</small>
                     <div *ngIf="passwordMatchError">
                         Password does not match
-                      </div>
+                      </div> -->
                     <div class="btn">
                         <!-- <button type="submit" class="button1" value="Sign Up">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> -->
                         <input (click)="onSignUp()" type="submit" class="button1" value="Sign Up">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

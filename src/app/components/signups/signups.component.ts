@@ -12,6 +12,11 @@ import { CustomValidators } from 'src/app/helpers/matchvalidator';
   styleUrls: ['./signups.component.css']
 })
 export class SignupsComponent implements OnInit {
+
+  name!: string;
+  email!: string;
+  password!: string;
+  error!: string;
   type: string = "password";
   isText: boolean = false;
   eyeIcon: string = "fa-eye-slash";
@@ -29,9 +34,9 @@ export class SignupsComponent implements OnInit {
       role: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
-      password_confirmation: ['', Validators.required]
-    },
-    [CustomValidators.MatchValidator('password', 'password_confirmation')])
+      //password_confirmation: ['', Validators.required]
+    })
+    //[CustomValidators.MatchValidator('password', 'password_confirmation')])
   }
 
   hideShowPass(){
@@ -41,18 +46,18 @@ export class SignupsComponent implements OnInit {
   }
 
   
-  get passwordMatchError() {
-    return (
-      this.signUpForm.getError('mismatch') &&
-      this.signUpForm.get('confirmPassword')?.touched
-    );
-  }
+  // get passwordMatchError() {
+  //   return (
+  //     this.signUpForm.getError('mismatch') &&
+  //     this.signUpForm.get('confirmPassword')?.touched
+  //   );
+  // }
 
   onSignUp(){
     if(this.signUpForm.valid) {
       // send the obj to database
       console.log(this.signUpForm.value)
-      this.auth.signUp(this.signUpForm.value)
+      this.auth.signUp(this.name, this.email, this.password)
       .subscribe({
         next:(res=>{
           this.toast.success({detail: "SUCCESS", summary:res.message, duration: 5000});

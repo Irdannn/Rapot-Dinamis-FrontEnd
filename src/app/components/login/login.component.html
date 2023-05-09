@@ -19,11 +19,13 @@
                         <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
                     </div>
                     <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')" class="text-danger">* Mohon isi Password </small>
+                    
                     <div class="btn">
-                        <input (click)="onLogin()" type="submit" class="button1" value="Login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="button" class="button2" value="Sign Up" routerLink="/signups">
-                        <!-- <input type="submit" class="button3" value="Login"> -->
+                        <input (click)="onLogin()" type="submit" class="button" value="Login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
+                    <small>Belum punya akun ? 
+                        <a routerLink="/signups">Daftar</a>
+                    </small>
                 </form>
             </div>
         </div>
