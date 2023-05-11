@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt'; 
 import { TokenApiModel } from '../models/token-api.model';
-import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +27,8 @@ export class AuthService {
     this.router.navigate(['login'])
   }
 
-  storeToken(tokenValue: string){
-    localStorage.setItem('token', tokenValue)
+  storeToken(token: string){
+    localStorage.setItem('token', token)
   }
 
   storeRefreshToken(tokenValue: string) {
@@ -49,14 +48,14 @@ export class AuthService {
   }
 
   decodedToken(){
-    //const jwtHelper = new JwtHelperService();
+    const jwtHelper = new JwtHelperService();
     const token = this.getToken()!;
-    //return jwtHelper.decodeToken(token);
+    return jwtHelper.decodeToken(token);
   }
 
   getfullNameFromToken(): any{
     if(this.userPayLoad)
-    return this.userPayLoad.unique_name;
+    return this.userPayLoad.name;
   }
 
   getRoleFromToken(){

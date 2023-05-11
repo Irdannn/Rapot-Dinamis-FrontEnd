@@ -41,29 +41,18 @@ export class LoginComponent implements OnInit{
   onLogin(){
     if(this.loginForm.valid) {
       // send the obj to database
-      console.log(this.loginForm.value)
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res)=>{  
           console.log(res.message);        
           this.loginForm.reset();
           this.auth.storeToken(res.accessToken);
-          this.auth.storeRefreshToken(res.refreshToken);
-          let tokenPayload = this.auth.decodedToken();
-          //this.userStore.setFullNameForStore(tokenPayload.unique_name);
-          //this.userStore.setRoleForStore(tokenPayload.role);
-          this.toast.success({detail: "SUCCESS", summary:res.message, duration: 5000});
+          //this.auth.storeRefreshToken(res.refreshToken)
+          this.toast.success({detail: "Assalamualaikum", summary:"Berhasil Login", duration: 5000});
           this.router.navigate(['dashboard'])
-          // console.log(res.message);         
-          // this.loginForm.reset();
-          // this.auth.storeToken(res.accessToken);
-          // this.auth.storeRefreshToken(res.refreshToken);
-          // let tokenPayload = this.auth.decodedToken();
-          // this.toast.success({detail: "SUCCESS", summary:res.message, duration: 5000});
-          // this.router.navigate(['profile'])
         },
         error:(err)=>{
-          this.toast.error({detail: "ERROR", summary:"Something went wrong!", duration: 5000});
+          this.toast.error({detail: "ERROR", summary:"Ooops! Ada yang salah", duration: 5000});
           console.log(err);
         }
         
@@ -72,7 +61,7 @@ export class LoginComponent implements OnInit{
       console.log("form is not valid")
       // throw the error using toaster and with required fields
       ValidateForm.validateAllformsFields(this.loginForm);
-      alert("your form is invalid")
+      this.toast.error({detail: "ERROR", summary:"Email atau Password Salah"})
 
     }
   }

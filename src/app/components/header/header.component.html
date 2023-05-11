@@ -12,6 +12,6 @@
                 <div (click)="logout()" mat-menu-item class="dropdown-item">Logout</div>
             </mat-menu>
         </div>
-        <div mat-button [matMenuTriggerFor]="Menu" class="profile-name">John Doe</div>
+        <div mat-button [matMenuTriggerFor]="Menu" class="profile-name">{{fullName}}</div>
     </div>
 </header>

@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserStoreService {
-  private name$ = new BehaviorSubject<string>("");
+  private fullName$ = new BehaviorSubject<string>("");
   private role$ = new BehaviorSubject<string>("");
 
   constructor() { }
@@ -19,10 +19,10 @@ export class UserStoreService {
   }
 
   public getFullNameFromStore() {
-    return this.name$.asObservable();
+    return this.fullName$.asObservable();
   }
 
-  public setFullNameForStore(name:string){
-    this.name$.next(name)
+  public setFullNameForStore(fullname:string){
+    this.fullName$.next(fullname)
   }
 }
