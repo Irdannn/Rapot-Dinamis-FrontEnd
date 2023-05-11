@@ -26,15 +26,14 @@ export class SignupsComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      username: ['', Validators.required],
-      namalengkap: ['', Validators.required],
+      name: ['', Validators.required],
       role: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
-      password_confirmation: ['', Validators.required]
+      //password_confirmation: ['', Validators.required]
     },
-    [CustomValidators.MatchValidator('password', 'password_confirmation')])
-  }
+    //[CustomValidators.MatchValidator('password', 'password_confirmation')])
+  )}
 
   hideShowPass(): void{
     this.isText = !this.isText;
@@ -43,12 +42,12 @@ export class SignupsComponent implements OnInit {
   }
 
   
-  get passwordMatchError() {
-    return (
-      this.signUpForm.getError('mismatch') &&
-      this.signUpForm.get('confirmPassword')?.touched
-    );
-  }
+  // get passwordMatchError() {
+  //   return (
+  //     this.signUpForm.getError('mismatch') &&
+  //     this.signUpForm.get('confirmPassword')?.touched
+  //   );
+  // }
 
   onSignUp(){
     if(this.signUpForm.valid) {
@@ -57,7 +56,7 @@ export class SignupsComponent implements OnInit {
       this.auth.signUp(this.signUpForm.value)
       .subscribe({
         next:(res=>{
-          this.toast.success({detail: "SUCCESS", summary:res.message, duration: 5000});
+          this.toast.success({detail: "SUCCESS", summary:"Pendaftaran Berhasil!", duration: 5000});
           this.signUpForm.reset();
           this.router.navigate(['login'])
         }),
@@ -66,10 +65,9 @@ export class SignupsComponent implements OnInit {
         })
       })
     } else {
-      console.log("form is not valid")
       // throw the error using toaster and with required fields
       ValidateForm.validateAllformsFields(this.signUpForm);
-      alert("your form is invalid")
+      this.toast.error({detail: "ERROR", summary:"Mohon isi semua field!", duration: 5000});
     }
   }
 }

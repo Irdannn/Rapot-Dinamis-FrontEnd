@@ -5,11 +5,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgToastModule  } from 'ng-angular-popup';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
-import { MatMenuModule} from '@angular/material/menu';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 
 import { AppComponent } from './app.component';
