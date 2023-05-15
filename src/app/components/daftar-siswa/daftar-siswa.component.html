@@ -7,7 +7,7 @@
     <div class="box sidebar">
         <app-sidenav></app-sidenav>
     </div>
-    <ng-container *ngIf="role === 'admin'" class="box content table-content">
+    <div *ngIf="role === 'Admin'" class="box content table-content">
         <div class="title-page">
             <h4>Daftar Siswa</h4>
             <p>Kelas</p>
@@ -19,25 +19,41 @@
                     <th  scope="col">ID</th>
                     <th scope="col">Action</th>
                     <th  scope="col">Nama</th>
+                    <th  scope="col">Unit</th>
                     <th  scope="col">Kelas</th>
+                    <th  scope="col">NISN</th>
+                    <th  scope="col">Jenis Kelamin</th>
+                    <th  scope="col">TTL</th>
                     <th  scope="col">Nama Ibu</th>
                     <th  scope="col">Nama Ayah</th>
                     <th  scope="col">Nilai</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor = "let siswa of listSiswa">
                     <td>
-                        -
+                        {{siswa.id}}
                     </td>
                     <td id="button-table" scope="row"> 
                         -                     
                     </td>
                     <td>
-                        -
+                        {{siswa.namalengkap}}
                     </td>
                     <td>
-                        -
+                        {{siswa.unit}}
+                    </td>
+                    <td>
+                        {{siswa.kelas}}
+                    </td>
+                    <td>
+                        {{siswa.nisn}}
+                    </td>
+                    <td>
+                        {{siswa.jeniskelamin}}
+                    </td>
+                    <td>
+                        {{siswa.ttl}}
                     </td>
                     <td>
                         -
@@ -51,7 +67,7 @@
                 </tr>                
             </tbody>
         </table>
-    </ng-container>
+    </div>
     <div class="box footer">
         <app-footer></app-footer>
     </div>
