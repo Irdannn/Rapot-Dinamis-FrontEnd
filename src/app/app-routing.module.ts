@@ -13,7 +13,7 @@ import { TutorialComponent } from './components/tutorial/tutorial.component';
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'signups', component: SignupsComponent},
+  {path: 'signup', component: SignupsComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'daftarsiswa', component:  DaftarSiswaComponent, canActivate:[AuthGuard]},

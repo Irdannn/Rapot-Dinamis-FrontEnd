@@ -29,34 +29,24 @@ export class SignupsComponent implements OnInit {
       name: ['', Validators.required],
       role: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', Validators.required],
-      //password_confirmation: ['', Validators.required]
-    },
-    //[CustomValidators.MatchValidator('password', 'password_confirmation')])
-  )}
+      password: ['', Validators.required]
+    })
+  }
 
-  hideShowPass(): void{
+  hideShowPass(){
     this.isText = !this.isText;
     this.isText ? this.eyeIcon = "fa-eye" : this.eyeIcon = "fa-eye-slash";
     this.isText ? this.type = "text" : this.type = "password";
   }
 
-  
-  // get passwordMatchError() {
-  //   return (
-  //     this.signUpForm.getError('mismatch') &&
-  //     this.signUpForm.get('confirmPassword')?.touched
-  //   );
-  // }
-
   onSignUp(){
     if(this.signUpForm.valid) {
       // send the obj to database
-      console.log(this.signUpForm.value)
+      //console.log(this.signUpForm.value)
       this.auth.signUp(this.signUpForm.value)
       .subscribe({
         next:(res=>{
-          this.toast.success({detail: "SUCCESS", summary:"Pendaftaran Berhasil!", duration: 5000});
+          this.toast.success({detail: "SUCCESS", summary:"Pendaftaran Berhasil", duration: 5000});
           this.signUpForm.reset();
           this.router.navigate(['login'])
         }),
@@ -65,9 +55,10 @@ export class SignupsComponent implements OnInit {
         })
       })
     } else {
+      console.log("form is not valid")
       // throw the error using toaster and with required fields
       ValidateForm.validateAllformsFields(this.signUpForm);
-      this.toast.error({detail: "ERROR", summary:"Mohon isi semua field!", duration: 5000});
+      this.toast.error({detail: "ERROR", summary:"Mohon Isi Semuanya", duration: 5000});
     }
   }
 }

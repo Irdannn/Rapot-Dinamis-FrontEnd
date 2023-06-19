@@ -12,7 +12,6 @@ import { UserStoreService } from 'src/app/services/user-store.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-  
   type: string = "password";
   isText: boolean = false;
   eyeIcon: string = "fa-eye-slash";
@@ -43,16 +42,15 @@ export class LoginComponent implements OnInit{
       // send the obj to database
       this.auth.login(this.loginForm.value)
       .subscribe({
-        next:(res)=>{  
-          console.log(res.message);        
+        next:(res)=>{         
           this.loginForm.reset();
           this.auth.storeToken(res.accessToken);
-          //this.auth.storeRefreshToken(res.refreshToken)
-          this.toast.success({detail: "Assalamualaikum", summary:"Berhasil Login", duration: 5000});
+          // this.auth.storeRefreshToken(res.refreshToken);
+          this.toast.success({detail: "SUCCESS", summary:"Assalamualaikum", duration: 5000});
           this.router.navigate(['dashboard'])
         },
         error:(err)=>{
-          this.toast.error({detail: "ERROR", summary:"Ooops! Ada yang salah", duration: 5000});
+          this.toast.error({detail: "ERROR", summary:"Something went wrong!", duration: 5000});
           console.log(err);
         }
         
@@ -61,7 +59,7 @@ export class LoginComponent implements OnInit{
       console.log("form is not valid")
       // throw the error using toaster and with required fields
       ValidateForm.validateAllformsFields(this.loginForm);
-      this.toast.error({detail: "ERROR", summary:"Email atau Password Salah"})
+      this.toast.error({detail: "ERROR", summary:"Mohon Isi Email dan Password", duration: 5000});
 
     }
   }
